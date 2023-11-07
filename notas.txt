@@ -1,0 +1,7 @@
+imagenes banner : BLOG - Articulo | exp - experiencia art | ubicaciones - art | :
+
+
+mobile img :  275 ancho x 355 alto
+Tablet : 295 w x 750 alto
+
+desktop 1200 vw : 1185 x 325

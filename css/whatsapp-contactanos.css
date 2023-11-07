@@ -1,0 +1,88 @@
+.whatsapp-contactanos {
+    color: #fff;
+    display: flex;
+    width: 250px;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    text-decoration: none
+}
+
+.whatsapp-contactanos:hover {
+    color: #fff
+}
+
+.whatsapp-contactanos__img {
+    width: 100px;
+    position: absolute;
+    left: -5px
+}
+
+.whatsapp-contactanos__text {
+    width: 68%;
+    font-weight: 500;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #74b970;
+    padding: 0;
+    margin: 0;
+    padding: 5px 0;
+    border-radius: 0 12px 12px 0;
+    letter-spacing: .5px
+}
+
+.whatsapp-contactanos__text span {
+    display: flex;
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 0;
+    justify-content: center
+}
+
+.num-whatsapp {
+    animation: numWhatsapp 3s infinite
+}
+
+@keyframes numWhatsapp {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    10% {
+        transform: rotate(9deg)
+    }
+
+    20% {
+        transform: rotate(0deg)
+    }
+
+    30% {
+        transform: rotate(7deg)
+    }
+
+    40% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(5deg)
+    }
+
+    60% {
+        transform: rotate(0deg)
+    }
+
+    70% {
+        transform: rotate(3deg)
+    }
+
+    80% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}

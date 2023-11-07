@@ -1,0 +1,58 @@
+#desactivar cache dinamica
+<IfModule mod_headers.c>
+Header set Cache-Control “max-age=0,no-store”
+</IfModule>
+
+
+RewriteEngine On
+
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^www.sobreellas.pe [NC]
+RewriteRule (.*) https://sobreellas.pe/$1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)$
+RewriteRule (.*) https://sobreellas.pe/$1 [L,R=301]
+
+
+
+RewriteCond %{HTTPS} off
+
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+
+
+
+
+#desactivar cache dinamica
+<IfModule mod_headers.c>
+Header set Cache-Control “max-age=0,no-store”
+</IfModule>
+
+
+RewriteEngine On
+
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^www.sobreellas.pe [NC]
+RewriteRule (.*) https://sobreellas.pe/$1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)$
+RewriteRule (.*) https://sobreellas.pe/$1 [L,R=301]
+
+
+
+RewriteCond %{HTTPS} off
+
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
