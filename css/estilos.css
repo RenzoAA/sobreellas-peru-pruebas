@@ -359,7 +359,7 @@ strong {
 .atraso-menstrual-contacto-title,
 .ubicaciones-h2-principal,
 .ubicaciones-zona-subtitle {
-    font-size: 2.5rem
+    font-size: 2rem
 }
 
 .atraso-menstrual-contacto__arrow {
@@ -467,7 +467,7 @@ strong {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6px 0
+    padding: 6px;
 }
 
 .ubicaciones-zonas-title a,
@@ -1362,6 +1362,9 @@ img {
 .banner-zona::before {
     background: rgba(15, 15, 15, .6)
 }
+.banner-zona-ubicaciones::before {
+    background: rgba(15, 15, 15, .4)
+}
 
 .banner-principal__texto {
     top: calc(50% - 215px);
@@ -1636,6 +1639,8 @@ img {
 
 @media screen and (min-width:992px) {
 
+
+    
     .atraso-menstrual-title-principal br,
     .card-ventas__text h2,
     .heading-banner__title {
@@ -1904,6 +1909,12 @@ img {
         width: 32%;
         border-top: 1px solid #e2e2e2
     }
+    .atraso-menstrual-contacto-title,
+.ubicaciones-h2-principal,
+.ubicaciones-zona-subtitle {
+    font-size: 2.5rem
+}
+
 }
 
 @media screen and (min-width:1200px) {
@@ -2073,6 +2084,9 @@ img {
 
     .seccion-experiencias__element {
         width: 32%
+    }
+    .nuestras-ubicaciones__zonas {
+        gap: 3rem
     }
 }
 
