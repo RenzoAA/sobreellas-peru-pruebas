@@ -38,11 +38,15 @@ html {
 }
 
 .img-articulo,
-.img-zona {
+.img-atraso{
     max-height: 350px;
-    /* object-fit: cover */
+    min-height: 350px;
 }
-
+.img-zona{
+    max-height: 350px;
+    min-height: 350px;
+    object-fit: cover
+}
 .contenido-box {
     background: #0e2758;
     color: #fff !important;
@@ -147,7 +151,9 @@ body {
     animation: 3.5s steps(10) infinite typing;
     animation-delay: 1.5s
 }
-
+.borde-formulario-distritos{
+    border-top: 1px solid #e2e2e2;
+}
 .ubicacion-distrito {
     border-top: 3px solid #e4e4e4;
     padding-bottom: 1.5rem
@@ -156,7 +162,21 @@ body {
 .btn-leermas__ubicaciones {
     width: fit-content
 }
-
+.texto-redireccion-distritos{
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px 2px 14px 16px;
+}
+.servicios-ubicaciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.servicios-ubicaciones img{
+    border-radius: 6px;
+}
 .btn-leermas__primary {
     font-size: 1.1rem !important;
     width: fit-content;
@@ -194,6 +214,38 @@ body {
     font-size: 2rem
 }
 /* Experiencias */
+.p-experiencias{
+    background: white;
+    border-radius: 12px;
+    
+}
+.lista-experiencias__box{
+    background-color: #fff;
+    /* padding: 12px 20px; */
+    border-radius: 6px;
+}
+.district-content{
+    border-top: 2px solid #e2e2e2
+}
+/* lista experiencias */
+.lista-experiencias__titulo h4{
+    font-size: 1.6rem;
+}
+.lista-experiencias__flecha{
+    width: 45px;
+}
+.lista-experiencias__ul{
+    list-style: none;
+}
+.img-principal-blog{
+    max-width: 400px;
+}
+.servicios-element img{
+    max-width: 300px;
+}
+.te-ofrecemos__img{
+    max-width: 500px !important;
+}
 .img-comunidad-experiencias{
     border-radius: 18px;
 }
@@ -203,7 +255,7 @@ body {
 }
 .img-principal__experiencias img{
     border-radius: 12px;
-    max-width: 600px;
+    max-width: 650px;
 }
 .title-banner-experiencias::before{
     content: "";
@@ -314,10 +366,38 @@ strong {
 .home-atraso-menstrual-title {
     font-size: 2.3rem
 }
+.video-sobreellas{
+    border-top: 2px solid #e2e2e2;
 
+}
+.lista-contenido{
+    background-color: #e97195;
+    /* max-width: 500px; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    font-size: 18px;
+    transition-duration: .5s;
+    border-radius: 12px;
+    gap: .1rem;
+    margin-bottom: 1.5rem;
+}
+.lista-contenido li,
+.lista-contenido li a{
+    color: white;
+    transition-duration: .5s;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+.lista-contenido li a:hover{
+    border-bottom: 2px solid white;
+}
 .title-principal-atraso-menstrual {
     position: absolute;
-    top: calc(50% - 185px);
+    top: calc(50% - 215px);
     color: #fff;
     font-size: 3rem;
     text-align: center;
@@ -326,8 +406,20 @@ strong {
     left: 0;
     z-index: 994
 }
-
-.title-principal-atraso-menstrual::before {
+.title-principal-retraso-menstrual{
+    position: absolute;
+    top: calc(50% - 250px);
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    left: 0;
+    z-index: 994
+}
+.title-principal-atraso-menstrual::before,
+.title-principal-retraso-menstrual::before{
     content: "";
     background-color: #e97195;
     position: absolute;
@@ -361,7 +453,11 @@ strong {
 .ubicaciones-zona-subtitle {
     font-size: 2rem
 }
-
+@media screen and (max-width:768px) {
+    .ubicaciones-h2-distritos{
+        font-size: 1.5rem;
+    }
+}
 .atraso-menstrual-contacto__arrow {
     display: flex;
     justify-content: center;
@@ -691,6 +787,9 @@ strong {
 }
 
 @media screen and (min-width:768px) {
+    .titulo-principal-h2{
+        font-size: 28px !important;
+    }
     .ul-footer .li-footer{
         list-style: none !important;
     }
@@ -806,6 +905,23 @@ strong {
 }
 
 @media screen and (min-width:992px) {
+    .texto-redireccion-distritos{
+        position: relative;
+        background: #fff;
+        border-radius: 12px;
+        padding: 24px 2px 24px 16px;
+    }
+    .servicios-ubicaciones{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 1rem;  
+    }
+    .titulo-principal-h2{
+        font-size: 32px !important;
+    }
     .ul-footer .li-footer{
         list-style: none !important;
     }
@@ -883,7 +999,7 @@ strong {
         color: #fff;
         font-size: 3.5rem;
         width: 93%;
-        max-width: 750px;
+        max-width: 850px;
         text-align: center;
     }
     .carousel-p {
@@ -898,11 +1014,17 @@ strong {
         gap: 1.5rem;
     }
     .articulos-enlaces{
-        width: 48%;
+        width: 32.5%;
     }
     .btn-articulo{
         display: flex;
         padding: 8px 30px !important;
+    }
+    /* experiencias */
+    .lista-experiencias__flecha{
+        transform: rotateZ(-75deg);
+        width: 40px;
+        margin-left: 1rem;
     }
 }
 
@@ -924,68 +1046,73 @@ strong {
     bottom: 0;
     z-index: 998
 }
-
 .barra__mobile {
-    width: 95%;
+    width: 100%;
+    padding: 0 12px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    gap: 12px;
-    height: 100%
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+}
+.consulta-mobile{
+display: flex;
+flex-wrap: nowrap;
+flex-direction: row;
+justify-content: center;
+gap: .3rem;
+align-items: center;
+width: 90%;
+font-size: 15px;
+}
+.img-consulta{
+    transform: rotateZ(90deg);
+    width: 30px;
+    animation: 3s infinite consultaManos;
+}
+@keyframes consultaManos {
+    0%,
+    100%,
+    50%,
+    75% {
+        transform: rotateZ(90deg)
+    }
+    21%,
+    7% {
+        transform: rotateZ(87deg)
+    }
+
+    14% {
+        transform: rotateZ(93deg)
+    }
+
+    28% {
+        transform: rotateZ(92deg)
+    }
+
+    35% {
+        transform: rotateZ(89deg)
+    }
 }
 
-.boton__barra {
-    min-width: 100px;
+.boton-whatsapp__img {
+    width: 55px;
+    height: 55px;
+    animation: 1.5s infinite signalFlotante;
     position: relative;
-    top: -10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center
+    bottom: .2rem;
 }
-
-.boton-whatsapp__enlace {
-    position: relative;
-    font-size: .8rem;
-    color: #fff !important;
-    animation: 3s infinite whatsappBarra
-}
-
-.boton-whatsapp__enlace span strong {
-    color: #fff !important
-}
-
-@keyframes whatsappBarra {
+@keyframes signalFlotante {
 
     0%,
     100% {
         transform: scale(1)
     }
 
-    35% {
-        transform: scale(1.1)
+    50% {
+        transform: scale(1.05)
     }
-}
-
-.boton-preguntas__enlace,
-.boton-zonas__enlace {
-    font-size: .6rem;
-    font-weight: 700
-}
-
-.boton-preguntas__enlace:hover,
-.boton-whatsapp__enlace:hover,
-.boton-zonas__enlace:hover {
-    color: #fff;
-    transform: scale(1.1)
-}
-
-.boton-whatsapp__img {
-    width: 67px
-}
-
-.boton-preguntas__img,
-.boton-zonas__img {
-    width: 32px
 }
 
 .header,
@@ -993,23 +1120,10 @@ strong {
     width: 100%;
     padding: 0 !important
 }
-
-.barra__enlace {
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-transform: uppercase;
-    gap: 6px;
-    letter-spacing: .5px
-}
-
 img {
     max-width: 100%;
     /* object-fit: cover */
 }
-
 .header {
     position: fixed;
     top: 0;
@@ -1027,7 +1141,6 @@ img {
     justify-content: space-between;
     align-items: center
 }
-
 .hamburger-box {
     display: flex !important;
     justify-content: center;
@@ -1038,7 +1151,6 @@ img {
     margin-right: 1rem;
     padding: 0 !important
 }
-
 .nav-principal {
     position: absolute;
     top: 100%;
@@ -1100,7 +1212,6 @@ img {
     list-style: none  !important;
     text-decoration: none !important;
 }
-
 .nav__enlace:hover {
     color: #0e2758;
     font-weight: bolder;
@@ -1328,10 +1439,13 @@ img {
 }
 
 .titulo-principal {
-    font-size: 23px !important;
+    font-size: 28px !important;
+}
+.titulo-principal-h2{
+    font-size: 19px;
 }
 .titulo-principal-h1{
-    font-size: 36px !important;
+    font-size: 26px !important; 
 }
 
 .carousel-control-next,
@@ -1367,7 +1481,7 @@ img {
 }
 
 .banner-principal__texto {
-    top: calc(50% - 215px);
+    top: calc(50% - 220px);
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -1471,7 +1585,14 @@ img {
 }
 
 @media screen and (min-width:768px) {
-
+    .servicios-ubicaciones{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 1rem;  
+    }
     .banner-section,
     .banner-section img,
     .banner-section:before {
@@ -1488,7 +1609,7 @@ img {
     }
 
     .titulo-principal {
-        font-size: 38px !important; 
+        font-size: 42px !important; 
     }
     .titulo-principal-h1{
         font-size: 46px !important;
@@ -1697,7 +1818,7 @@ img {
     }
 
     .titulo-principal {
-        font-size: 42px !important;
+        font-size: 48px !important;
     }
     .titulo-principal-h1{
         font-size: 48px !important;
@@ -1904,7 +2025,6 @@ img {
     .seccion-experiencias__element {
         width: 45%
     }
-
     .footer-element {
         width: 32%;
         border-top: 1px solid #e2e2e2
@@ -1918,6 +2038,17 @@ img {
 }
 
 @media screen and (min-width:1200px) {
+    .titulo-principal-h2{
+        font-size: 36px !important;
+    }
+    .title-principal-atraso-menstrual::before{
+        content: "";
+    background-color: #e97195;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    z-index: -1
+    }
     .ul-footer .li-footer{
         list-style: none !important;
     }
@@ -1952,7 +2083,7 @@ img {
 
     .title-principal-atraso-menstrual {
         position: absolute;
-        top: -175px;
+        top: -245px;
         color: #fff;
         text-align: center;
         width: 100%;
@@ -1970,7 +2101,7 @@ img {
         flex-wrap: nowrap !important;
         justify-content: space-evenly;
         align-items: center;
-        gap: 1.5rem
+        /* gap: 1.5rem */
     }
 
     .title-banner {
@@ -2030,7 +2161,7 @@ img {
     }
 
     .titulo-principal {
-        font-size: 48px !important;
+        font-size: 56px !important;
     }
     .titulo-principal-h1{
         font-size: 58px !important;
