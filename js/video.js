@@ -116,8 +116,9 @@ fullScreenBtn.addEventListener("click", () => {
         fullScreenBtn.classList.replace("fa-compress", "fa-expand");
         return document.exitFullscreen();
     }
-    fullScreenBtn.classList.replace("fa-expand", "fa-compress");
-    videoSobreellas.requestFullscreen();
+
+        fullScreenBtn.classList.replace("fa-expand", "fa-compress");
+        videoSobreellas.requestFullscreen();
 });
 
 speedBtn.addEventListener("click", () => speedOptions.classList.toggle("show"));
